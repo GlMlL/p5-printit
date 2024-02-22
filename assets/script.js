@@ -25,15 +25,15 @@ let currentIndex = 0;
 const ArrowLeft = document.querySelector(".arrow_left");
 const ArrowRight = document.querySelector(".arrow_right");
 const BulletPointContainer = document.querySelector(".dots");
-//* Cela permet au code d'intéragir avec les éléments HTML
+//* Cela permet au code d'intéragir avec les éléments HTML *//
 
-//ajout des écouteurs d'evenements en rattachant les fonctions next et previous
+//* ajout des écouteurs d'evenements en rattachant les fonctions next et previous *//
 ArrowLeft.addEventListener("click", previous);
 
 ArrowRight.addEventListener("click",next );
 
 
-//changements de slides au click
+//changements de slides au click suivant (vérifie si l'index actuel est = à l'indice de la dernière diapo)*//
 function next() {
 	console.log("Clique sur la flèche droite !")
 	BulletPointElement[currentIndex].classList.remove("dot_selected");
@@ -46,6 +46,7 @@ function next() {
   showSlide();
 }
 
+//changements de slides au click précédent (vérifie si l'index actuel est = à l'indice de la 1ère diapo  )*//
 function previous() {
 	console.log("Clique sur la flèche gauche !");
 
