@@ -27,13 +27,15 @@ const ArrowRight = document.querySelector(".arrow_right");
 const BulletPointContainer = document.querySelector(".dots");
 //* Cela permet au code d'intéragir avec les éléments HTML
 
+//ajout des écouteurs d'evenements en rattachant les fonctions next et previous
 ArrowLeft.addEventListener("click", previous);
-console.log("Clique sur la flèche gauche !")
+
 ArrowRight.addEventListener("click",next );
-console.log("Clique sur la flèche droite !")
+
 
 //changements de slides au click
 function next() {
+	console.log("Clique sur la flèche droite !")
 	BulletPointElement[currentIndex].classList.remove("dot_selected");
   if (currentIndex === slides.length - 1) {
     currentIndex = 0;
@@ -45,6 +47,8 @@ function next() {
 }
 
 function previous() {
+	console.log("Clique sur la flèche gauche !");
+
 	BulletPointElement[currentIndex].classList.remove("dot_selected");
   if (currentIndex === 0) {
     currentIndex = slides.length - 1;
