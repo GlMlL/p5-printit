@@ -59,7 +59,7 @@ function previous() {
   showSlide();
 }
 
-//* Fonction pour mettre à jour le contenu de la diapositive *//
+//* Fonction pour mettre à jour le contenu de la diapositive (chemin) *//
 function showSlide() {
 	const imageElement = document.querySelector(".banner-img");
 	const textElement = document.querySelector("#banner p");
@@ -69,7 +69,7 @@ function showSlide() {
 	textElement.innerHTML = slides[currentIndex].tagLine;
   }
 
-//* Fonction qui permet de mettre à jour le style du bullet point actif - Permet de savoir quel bullet point est séléctionné *//
+//* Ce code crée des éléments HTML pour représenter des bulletpoints qui sont utilisés pour indiquer sur quelle diapositive nous nous situons dans le slider.  *//
 //* Elle parcourt l'ensemble des éléments et va ajouter la classe "dot_selected" au bullet point qui correspond à la diapo actuelle *//
 for (let i = 0; i < slides.length; i++) {
 	const dot = document.createElement("div");
